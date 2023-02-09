@@ -1,2 +1,2 @@
 #!/bin/bash
-chown vincent:staff root/tmp/alx-system_engineering-devops
+chown vincent:staff ./
