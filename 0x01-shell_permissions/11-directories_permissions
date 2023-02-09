@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod -hR 755 tmp/alx-system_engineering-devops
+chmod -h 755 /tmp/alx-system_engineering-devops
