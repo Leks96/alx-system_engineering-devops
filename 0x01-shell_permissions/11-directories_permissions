@@ -1,0 +1,2 @@
+#!/bin/bash
+chmod -h 711 tmp/alx-system_engineering-devops 
