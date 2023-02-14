@@ -1,0 +1,2 @@
+#!/bin/bash
+uniq -iw /etc/ssh/sshd_config
