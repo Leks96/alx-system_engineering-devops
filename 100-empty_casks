@@ -1,0 +1,2 @@
+#!/bin/bash
+find ./0x02-shell_redirections -empty | cut -d "/" -f 3
