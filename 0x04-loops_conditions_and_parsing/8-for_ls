@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script displays the content of the current directory
+
+List="$(ls)"
+
+for i in $List; do
+	case "$i" in
+		*-*)
+		echo "${i#*-}"
+	esac
+done
