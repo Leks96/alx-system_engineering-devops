@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # This script is displaying "Best School" 10 times
+# and replace 3rd and 7th ite with something else
 
 x=0
 
