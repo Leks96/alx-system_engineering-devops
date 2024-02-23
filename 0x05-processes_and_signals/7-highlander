@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Display to infinity and beyond and I am invisible at intervals
+
+sig_handler() {
+	echo "I am invincible!!!"
+}
+
+sig_killer() {
+	echo "Killed"
+	exit 0
+}
+
+trap 'sig_handler' SIGTERM
+trap 'sig_killer' SIGKILL
+
+while true; do
+	echo "To infinity and beyond"
+	sleep 2
+done
