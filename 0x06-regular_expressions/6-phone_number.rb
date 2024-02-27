@@ -3,5 +3,6 @@
 # matching method
 # The regular expression must match a 10 digit phone number
 
-matcher = ARGV[0].scan(/^\d{10}$/).join
-puts matcher
+scanner = ARGV[0]
+matcher = scanner.scan(/^\d{10}$/)
+puts matcher.join

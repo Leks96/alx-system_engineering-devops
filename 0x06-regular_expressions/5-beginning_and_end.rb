@@ -4,5 +4,6 @@
 # The regular expression must be exactly matching a string that starts,
 # with h ends with n and can have any single character in between:wq
 
-matcher = ARGV[0].scan(/^h.n$/).join
-puts matcher
+scanner = ARGV[0]
+matcher = scanner.scan(/^h.n$/)
+puts matcher.join

@@ -3,5 +3,6 @@
 # matching method
 # The regular expression must match School
 
-matcher = ARGV[0].scan(/School/).join
-puts matcher
+scanner = ARGV[0]
+matches = scanner.scan(/School/)
+puts matches.join

@@ -3,5 +3,6 @@
 # matching method
 # The regular expression must match the given cases
 
-matcher = ARGV[0].scan(/hbt*n/).join
-puts matcher
+scanner = ARGV[0]
+matcher = scanner.scan(/hbt*n/)
+puts matcher.join
