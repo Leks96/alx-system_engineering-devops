@@ -1,0 +1,45 @@
+https://miro.com/app/board/uXjVKcgm0W0=/?share_link_id=869414554964
+
+What is a Server?: 
+A server is a computer system or software that provides functionality
+to other devices or programs, known as clients, over a network.
+
+What is the role of the domain name?:
+The domain name serves as a human-readable alias for the server's IP address.
+It allows users to easily access websites without needing to remember complex numerical IP addresses.
+
+What type of DNS record is www in www.foobar.com?:
+www is a subdomain, and it's typically represented by a DNS "A" record,
+which maps the subdomain to the server's IP address.
+
+What is the role of the web server?:
+The web server handles incoming HTTP requests from clients (browsers)
+and serves static content like HTML, CSS, and images.
+It can also manage dynamic content by passing requests to the application server.
+
+What is the role of the application server?:
+The application server executes the server-side code of the website,
+generating dynamic content based on user requests.
+It interacts with the database to retrieve and store data as needed.
+
+What is the role of the database?:
+The database stores and manages structured data for the website.
+It allows for efficient storage, retrieval, and manipulation of data,
+such as user information, product details, and other application data.
+
+What is the server using to communicate with the user's computer requesting the website?:
+The server communicates with the user's computer over the HTTP protocol.
+When a user enters the website's URL in their browser, the browser sends an HTTP request to the server,
+and the server responds with the requested web page.
+
+Now, let's address the issues with this infrastructure:
+
+Single Point of Failure (SPOF):
+Since we have only one server, if it goes down, the entire website becomes inaccessible. 
+This can result from hardware failure, software issues, or network problems.
+
+Downtime during maintenance:
+Any maintenance tasks, such as deploying new code or updates, require taking the web server offline.
+During this time, the website will be inaccessible to users.
+
+				Limited scalability: With only one server, the infrastructure cannot handle a large influx of incoming traffic efficiently. Scaling the infrastructure to handle increased traffic would require additional servers and load balancing configuration.

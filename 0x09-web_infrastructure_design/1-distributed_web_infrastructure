@@ -1,0 +1,36 @@
+https://miro.com/app/board/uXjVKctGANY=/?share_link_id=329175530002
+
+Load Balancer Configuration:
+The load balancer is configured with a round-robin distribution algorithm.
+This algorithm evenly distributes incoming requests across the available web servers in a sequential manner.
+
+Active-Active vs. Active-Passive Setup:
+The load balancer enables an Active-Active setup.
+In Active-Active, all servers actively handle incoming requests simultaneously,
+distributing the load evenly across them. In contrast, Active-Passive involves one server
+actively serving requests while the other server remains on standby, only becoming active if the primary server fails.
+
+Database Primary-Replica Cluster:
+In a Primary-Replica cluster, the primary node handles write operations,
+such as inserting, updating, and deleting data. The replica nodes replicate data
+from the primary node and handle read operations, serving read-only queries from clients.
+
+Difference Between Primary and Replica Nodes:
+The primary node handles write operations and serves as the authoritative source of data for the database.
+It processes incoming write requests and ensures data consistency across the cluster.
+Replica nodes, on the other hand, replicate data from the primary node and serve read requests.
+They provide scalability and fault tolerance by distributing read operations across multiple nodes, enhancing overall database performance.
+
+Issues with this Infrastructure:
+
+Single Points of Failure (SPOFs):
+Although we've added redundancy with multiple servers, each component still represents a
+potential single point of failure. If any critical component fails, it could disrupt service availability.
+				  
+Security Issues:
+Lack of a firewall and HTTPS encryption introduces security vulnerabilities,
+making the infrastructure susceptible to attacks such as DDoS, SQL injection, and data interception.
+
+No Monitoring:
+Without monitoring tools in place, it's challenging to detect and respond to performance issues,
+security threats, or infrastructure failures in a timely manner. Monitoring is crucial for maintaining the health and reliability of the system.

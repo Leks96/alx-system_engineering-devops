@@ -1,0 +1,43 @@
+https://miro.com/app/board/uXjVNYfp_v0=/?share_link_id=626820252308
+
+Specifics:
+
+Why firewalls?:
+Firewalls provide an additional layer of security by filtering incoming
+and outgoing traffic based on predefined security rules.
+They help prevent unauthorized access and protect against various network-based attacks.
+
+Why HTTPS?:
+HTTPS encrypts data transmitted between the user's browser and the web server,
+ensuring confidentiality and integrity of sensitive information
+such as login credentials, personal data, and payment details.
+
+Purpose of monitoring:
+Monitoring is used to track the health, performance, and
+availability of the infrastructure components and applications.
+It helps identify issues proactively, troubleshoot problems, and optimize performance.
+
+Data collection by monitoring tool:
+The monitoring tool collects data from various sources such as system metrics (CPU, memory, disk usage),
+application logs, network traffic, and user interactions. It aggregates and
+analyzes this data to provide insights into the system's behavior and performance.
+
+Monitoring web server QPS (Queries Per Second):
+To monitor the web server's QPS, we would configure the monitoring tool to collect metrics related to
+incoming HTTP/HTTPS requests and calculate the rate at which these requests are processed over time.
+
+Issues:
+
+Terminating SSL at the load balancer level:
+Terminating SSL at the load balancer exposes decrypted traffic within the internal network,
+potentially compromising data confidentiality. It's recommended to maintain end-to-end encryption
+by encrypting traffic between the load balancer and web servers as well.
+
+Single MySQL server capable of accepting writes:
+Having only one MySQL server capable of accepting write operations introduces a single point of failure
+for database writes. Implementing a primary-replica (master-slave) replication setup would provide redundancy and improve fault tolerance.
+
+Identical server components:
+Having servers with identical components may lead to uniform vulnerabilities and dependencies.
+Diversifying server configurations can mitigate risks associated with common vulnerabilities and single points of failure.
+Additionally, different workload characteristics may require specialized configurations for optimal performance.
