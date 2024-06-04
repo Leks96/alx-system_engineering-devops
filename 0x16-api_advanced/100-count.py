@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """ Module for storing the count_words function. """
 import requests
 from collections import Counter
